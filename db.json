@@ -1,0 +1,38 @@
+{
+    "products" : [
+      {
+              "id" : 1,
+              "position":"Chairman",
+              "startDate":"01-JUN-2023",
+              "endDate":"02-JUN-2023",
+              "voters":true,
+              "dob":"03-JUN-2023",
+              "fname":"John Rey",
+              "mname":"Nalla",
+              "lname":"Decosta",
+              "suffix":"Jr.",
+              "gender":"Male",
+              "status":"Single",
+              "religion":"Roman Catholic",
+              "nationality":"Filipino"
+  
+      },
+      {
+        "id" : 2,
+        "position":"Chairman",
+        "startDate":"01-JUN-2023",
+        "endDate":"02-JUN-2023",
+        "voters":true,
+        "dob":"03-JUN-2023",
+        "fname":"Jayson",
+        "mname":"Nalla",
+        "lname":"Decosta",
+        "suffix":"Jr.",
+        "gender":"Male",
+        "status":"Single",
+        "religion":"Roman Catholic",
+        "nationality":"Filipino"
+
+}
+  ]
+  }

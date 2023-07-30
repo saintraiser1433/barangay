@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <h3>LIST OFFICIALS</h3>
+        <hr class="mt-2 mb-2" />
+        <div id="listjs">
+          <div class="d-flex align-items-center justify-content-between">
+            <div></div>
+            <div class="flex-shrink-0">
+              <input
+                class="form-control listjs-search"
+                id="search-input"
+                placeholder="Search"
+                style="max-width: 200px"
+              />
+            </div>
+          </div>
+          <br />
+          <div id="pagination-container"></div>
+          <div id="table-default" class="table-responsive">
+            <table class="table" id="tables">
+              <thead>
+                <tr>
+                  <th>
+                    <button class="table-sort" data-sort="sort-id">#</button>
+                  </th>
+                  <th>
+                    <button class="table-sort" data-sort="sort-name">
+                      Full Name
+                    </button>
+                  </th>
+                  <th>
+                    <button class="table-sort" data-sort="sort-name">
+                      Position
+                    </button>
+                  </th>
+                  <th>
+                    <button class="table-sort" data-sort="sort-name">
+                      Tenure
+                    </button>
+                  </th>
+                  <th>
+                    <button class="table-sort" data-sort="sort-name">
+                      Gender
+                    </button>
+                  </th>
+                  <th>
+                    <button class="table-sort" data-sort="sort-name">
+                      Religion
+                    </button>
+                  </th>
+                  <th>
+                    <button class="table-sort" data-sort="sort-name">
+                      Nationality
+                    </button>
+                  </th>
+                  <th>
+                    <button class="table-sort">Action</button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="table-tbody">
+                <tr *ngFor="let x of dataSource; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>
+                    {{ x.fname | uppercase }} {{ x.lname | uppercase }}
+                    {{ x.mname | uppercase }} {{ x.suffix | uppercase }}
+                  </td>
+                  <td>{{ x.position | uppercase }}</td>
+                  <td>
+                    {{ x.startDate | date }} - {{ x.endDate | uppercase }}
+                  </td>
+                  <td>{{ x.gender }}</td>
+                  <td>{{ x.religion }}</td>
+                  <td>{{ x.nationality }}</td>
+                  <td>
+                    <button class="badge bg-info" (click)="onUpdate(x.id, x)">
+                      Edit
+                    </button>
+                    |
+                    <button class="badge bg-danger" (click)="onDelete(x.id)">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <div class="btn-toolbar">
+              <p class="mb-0" id="listjs-showing-items-label">
+                Showing 0 items
+              </p>
+              <ul class="pagination ms-auto mb-0"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
